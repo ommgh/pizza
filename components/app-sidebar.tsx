@@ -19,7 +19,7 @@ const data = {
 	navMain: [
 		{
 			title: "Home",
-			url: "#",
+			url: "/dashboard",
 			icon: House,
 			isActive: true,
 		},

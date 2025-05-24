@@ -127,7 +127,6 @@ const LoginFormFallback = () => {
 		>
 			<div className="space-y-6">
 				<div className="space-y-4">
-					{/* Placeholder for form fields */}
 					<div className="space-y-2">
 						<div className="text-sm font-medium">Email</div>
 						<div className="h-10 w-full bg-gray-100 rounded-md animate-pulse"></div>
