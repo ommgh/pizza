@@ -13,9 +13,22 @@ import {
 	SidebarProvider,
 	SidebarTrigger,
 } from "@/components/ui/sidebar";
-import { useReactTable } from "@tanstack/react-table";
+import { DataTable } from "@/app/(protected)/orders/data-table";
+import { columns } from "@/app/(protected)/orders/columns";
 
-export default function OrdersPage() {
+async function fetchOrders() {
+	const response = await fetch("http://localhost:3000/api/orders");
+
+	if (!response.ok) {
+		throw new Error("Failed to fetch orders");
+	}
+
+	return response.json();
+}
+
+export default async function OrdersPage() {
+	const orders = await fetchOrders();
+
 	return (
 		<SidebarProvider>
 			<AppSidebar />
@@ -42,7 +55,10 @@ export default function OrdersPage() {
 						</Breadcrumb>
 					</div>
 				</header>
-				<div className="flex items-center justify-center h-full"></div>
+
+				<main className="px-4 py-6 w-full max-w-7xl mx-auto">
+					<DataTable columns={columns} data={orders} />
+				</main>
 			</SidebarInset>
 		</SidebarProvider>
 	);
