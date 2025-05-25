@@ -74,7 +74,7 @@ export default function PizzaDashboardLanding() {
 					>
 						<h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
 							Slice Through the
-							<span className="text-red-600"> Chaos</span>
+							<span className="text-[#e11d48]"> Chaos</span>
 						</h1>
 
 						<div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">

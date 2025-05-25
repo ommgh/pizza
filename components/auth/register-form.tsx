@@ -85,7 +85,7 @@ export const RegisterForm = () => {
 											disabled={isPending}
 											{...field}
 											type="email"
-											placeholder="om.works01@gmail.com"
+											placeholder="hi@ommishra.tech"
 											className="w-full"
 										/>
 									</FormControl>
@@ -118,7 +118,7 @@ export const RegisterForm = () => {
 					<Button
 						type="submit"
 						disabled={isPending}
-						className="w-full"
+						className="w-full bg-red-700"
 					>
 						Create an account
 					</Button>

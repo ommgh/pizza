@@ -60,7 +60,7 @@ const LoginFormWithSearchParams = () => {
 			<Form {...form}>
 				<form
 					onSubmit={form.handleSubmit(onSubmit)}
-					className="space-y-6"
+					className="space-y-6 max-w-md"
 				>
 					<div className="space-y-4">
 						<FormField
@@ -74,7 +74,7 @@ const LoginFormWithSearchParams = () => {
 											disabled={isPending}
 											{...field}
 											type="email"
-											placeholder="om.works01@gmail.com"
+											placeholder="hi@ommishra.tech"
 											className="w-full"
 										/>
 									</FormControl>
@@ -107,7 +107,7 @@ const LoginFormWithSearchParams = () => {
 					<Button
 						type="submit"
 						disabled={isPending}
-						className="w-full"
+						className="w-full bg-red-700"
 					>
 						LogIn
 					</Button>
