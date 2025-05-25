@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# 🍕 Next.js Pizza Orders Dashboard
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+This project is a frontend assignment, which includes a responsive dashboard application built with Next.js 15, with Email/Password & Google OAuth authentication via NextAuth.js, styled with Tailwind CSS. Authenticated users can access a dashboard with mock pizza order data and user-specific settings, optimized for both desktop and mobile experiences.
+
+## Tech Stack
+
+* **Framework**: Next.js (App Router)
+* **Auth**: NextAuth.js with Google OAuth
+* **UI**: Tailwind CSS, ShadCN Components
+* **Database**: PostgreSQL
+* **ORM**: Prisma
+* **Resend** – Verification Email
+* **React Hook Form** – Form handling
+* **React Table** – Headless Table
+* **Deployment**: Vercel
+
+---
+
+## Features
+
+* Google Sign-in via OAuth (NextAuth.js)
+* Email/Password Authentication (NextAuth.js):
+
+  * Sign-in/Sign-up using PostgreSQL Database
+  * Email Verification Using Resend.
+  
+* Protected dashboard with:
+
+  * Greeting: Hello, \[User Name]
+  * Orders Table (mocked pizza orders with sorting & pagination)
+* Responsive Sidebar Navigation
+* Smooth UI/UX with dark mode support
+
+---
+
+## Project Structure
+
+```
+actions/            → Server actions for auth flows
+app/                → Next.js app directory
+  └── (protected)/  → Authenticated routes (dashboard, orders, settings)
+  └── api/          → NextAuth and mock order API routes
+  └── auth/         → Public auth routes (login, register, verification)
+components/         → Reusable UI and feature-specific components
+data/               → User related data fetching
+hooks/              → Custom React hooks
+lib/                → Utility functions and mail/token helpers
+prisma/             → Database Schema
+public/             → Static assets
+schemas/            → Zod validation schemas
+types/              → Shared TypeScript types
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Setup Instructions
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Clone the Repository**
 
-## Learn More
+   ```bash
+   git clone https://github.com/yourusername/your-repo.git
+   cd your-repo
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install Dependencies**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   pnpm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Configure Environment Variables**
+   Create a `.env.local` file in the root:
 
-## Deploy on Vercel
+   ```
+   AUTH_SECRET=
+   DATABASE_URL=
+   RESEND_API_KEY=
+   GOOGLE_CLIENT_ID=
+   GOOGLE_CLIENT_SECRET=
+   NEXT_PUBLIC_API_URL=
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Run the App Locally**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   pnpm dev
+   ```
+
+5. **Open http://localhost:3000 in your browser to view the app.**
+---
+
+**support** : [hi@ommishra.tech](mailto:hi@ommishra.tech)
+
+
+
+
+
+
