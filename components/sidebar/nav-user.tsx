@@ -27,7 +27,8 @@ import {
 	useSidebar,
 } from "@/components/ui/sidebar";
 import { signOut, useSession } from "next-auth/react";
-import { ModeToggle } from "./mode-toggle";
+import { ModeToggle } from "../mode-toggle";
+import { DropdownThemeToggle } from "./dropdown-theme-toggle";
 
 export function NavUser() {
 	const session = useSession();
@@ -69,6 +70,8 @@ export function NavUser() {
 						side="bottom"
 						align="end"
 					>
+						<DropdownThemeToggle />
+						<DropdownMenuSeparator />
 						<DropdownMenuGroup>
 							<DropdownMenuItem>
 								<BadgeCheck />
