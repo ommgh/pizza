@@ -31,7 +31,7 @@ export const columns: ColumnDef<Orders>[] = [
 	{
 		accessorKey: "orderId",
 		header: ({ column }) => (
-			<DataTableColumnHeader column={column} title="Email" />
+			<DataTableColumnHeader column={column} title="Order Id" />
 		),
 	},
 	{

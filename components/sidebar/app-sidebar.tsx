@@ -22,7 +22,6 @@ const data = {
 			title: "Home",
 			url: "/dashboard",
 			icon: House,
-			isActive: true,
 		},
 		{
 			title: "Orders",
@@ -48,7 +47,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 										PIZZA
 									</span>
 									<span className="truncate text-xs">
-										Dashboard
+										Internal Dashboard
 									</span>
 								</div>
 							</Link>
