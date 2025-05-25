@@ -11,7 +11,7 @@ export const Social = () => {
 		try {
 			await signIn(provider, { callbackUrl: DEFAULT_AUTH_REDIRECT });
 			toast.success("Redirected successfully!", { id: toastId });
-		} catch (error) {
+		} catch {
 			toast.error("Login redirect failed", { id: toastId });
 		}
 	};
