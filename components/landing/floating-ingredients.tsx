@@ -30,7 +30,9 @@ export function FloatingIngredients() {
 						top: `${30 + (index % 2) * 30}%`,
 					}}
 				>
-					<span className="text-4xl">{ingredient.emoji}</span>
+					<span className="hidden sm:inline text-4xl">
+						{ingredient.emoji}
+					</span>
 				</motion.div>
 			))}
 		</div>
