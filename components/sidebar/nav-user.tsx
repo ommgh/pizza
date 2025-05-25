@@ -1,14 +1,6 @@
 "use client";
 
-import {
-	BadgeCheck,
-	Bell,
-	ChevronsUp,
-	ChevronsUpDown,
-	CreditCard,
-	LogOut,
-	Sparkles,
-} from "lucide-react";
+import { BadgeCheck, Bell, ChevronsUp, CreditCard, LogOut } from "lucide-react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
@@ -16,7 +8,6 @@ import {
 	DropdownMenuContent,
 	DropdownMenuGroup,
 	DropdownMenuItem,
-	DropdownMenuLabel,
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
@@ -24,11 +15,9 @@ import {
 	SidebarMenu,
 	SidebarMenuButton,
 	SidebarMenuItem,
-	useSidebar,
 } from "@/components/ui/sidebar";
 import { signOut, useSession } from "next-auth/react";
-import { ModeToggle } from "../mode-toggle";
-import { DropdownThemeToggle } from "./dropdown-theme-toggle";
+import { DropdownThemeToggle } from "@/components/sidebar/dropdown-theme-toggle";
 
 export function NavUser() {
 	const session = useSession();
