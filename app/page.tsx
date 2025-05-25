@@ -78,14 +78,18 @@ export default function PizzaDashboardLanding() {
 						</h1>
 
 						<div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-							<Button size="lg" className="px-8 py-4 text-lg">
-								Start Free Trial{" "}
+							<Button
+								size="lg"
+								className="px-8 py-4 text-lg"
+								onClick={() => router.push("/dashboard")}
+							>
+								Get Started{" "}
 								<ArrowRight className="ml-2 w-5 h-5" />
 							</Button>
 							<Button
 								size="lg"
 								variant="outline"
-								className="px-8 py-4 text-lg"
+								className="px-10 py-4 text-lg"
 							>
 								Watch Demo
 							</Button>

@@ -63,7 +63,6 @@ export function DataTable<TData, TValue>({
 
 	return (
 		<div className="w-full space-y-4">
-			{/* Filter Dropdown */}
 			<div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
 				<Select
 					value={
@@ -96,9 +95,8 @@ export function DataTable<TData, TValue>({
 				</Select>
 			</div>
 
-			{/* Responsive Table */}
 			<div className="w-full overflow-x-auto rounded-md border">
-				<Table className="min-w-[600px]">
+				<Table className="min-w-[700px]">
 					<TableHeader>
 						{table.getHeaderGroups().map(headerGroup => (
 							<TableRow key={headerGroup.id}>
@@ -149,7 +147,6 @@ export function DataTable<TData, TValue>({
 				</Table>
 			</div>
 
-			{/* Pagination */}
 			<div className="py-2">
 				<DataTablePagination table={table} />
 			</div>

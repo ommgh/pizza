@@ -17,7 +17,7 @@ export const Social = () => {
 	};
 
 	return (
-		<div className="flex items-center w-auto gap-x-3">
+		<div className="flex items-center w-full gap-x-4">
 			<Button
 				size="lg"
 				className="w-full gap-x-2"
