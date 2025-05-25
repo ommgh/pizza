@@ -36,10 +36,9 @@ export default function Page() {
 				</header>
 				<div className="flex items-center justify-center h-full">
 					<div>
-						<h1 className="text-4xl font-bold">
-							Welcome,
+						<h1 className="text-4xl font-bold text-center flex flex-col sm:flex-row sm:gap-3">
+							<span>Welcome,</span>
 							<span className="text-red-600">
-								{" "}
 								{name || "Guest"}!
 							</span>
 						</h1>
