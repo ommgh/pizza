@@ -36,8 +36,12 @@ export default function Page() {
 				</header>
 				<div className="flex items-center justify-center h-full">
 					<div>
-						<h1 className="text-2xl font-bold">
-							Welcome, {name || "Guest"}!
+						<h1 className="text-4xl font-bold">
+							Welcome,
+							<span className="text-red-600">
+								{" "}
+								{name || "Guest"}!
+							</span>
 						</h1>
 					</div>
 				</div>
